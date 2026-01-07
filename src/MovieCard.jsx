@@ -1,32 +1,22 @@
 import "./App.css";
+import movies from "./data/movies";
 
-function MovieCard({
-  title,
-  year,
-  runtime,
-  image,
-  genres,
-  imdbRating,
-  imdbVotes,
-}) {
+function MovieCard({movie}) {
   return (
-    <div className="movieCard">
-      <img className="imageCard" src={image} alt={title} />
+    <div className="movieCard" key={movie.title}>
+      <img className="imageCard" src={movie.image} alt={movie.title} />
       <div className="movieDetail">
-        <p className="textCard">{`Title: ${title}`}</p>
-        <p className="textCard">{`Year: ${year}`}</p>
-        <p className="textCard">{`Runtime: ${runtime}`}</p>
-        <p className="textCardGenre">Genres:
-          <span className="genres">
-            {genres.map((genre) => (
+        <p className="textCard">{`Title: ${movie.title}`}</p>
+        <p className="textCard">{`Year: ${movie.year}`}</p>
+        <p className="textCard">{`Runtime: ${movie.runtime}`}</p>
+        <p className="textCardGenre">Genres:{movie.genres.map((genre) => (
               <span key={genre} className="genreStyle">
                 {genre}
               </span>
             ))}
-          </span>
         </p>
-        <p className="textCard">{`IMDB Ratings: ${imdbRating}`}</p>
-        <p className="textCard">{`IMDB Votes: ${imdbVotes}`}</p>
+        <p className="textCard">{`IMDB Ratings: ${movie.imdbRating}`}</p>
+        <p className="textCard">{`IMDB Votes: ${movie.imdbVotes}`}</p>
       </div>
     </div>
   );

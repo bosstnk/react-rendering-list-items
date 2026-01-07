@@ -6,18 +6,11 @@ function App() {
   return (
     <div className="App">
       <section className="movie-list-section">
+        <h1>Movie List Section</h1>
         {/* Render Movie Lists Here */}
         {movies.map((movie) => {
           return (
-          <MovieCard 
-          title= {movie.title}
-          year= {movie.year}
-          runtime= {movie.runtime}
-          genres= {movie.genres}
-          image= {movie.image}
-          imdbRating= {movie.imdbRating}
-          imdbVotes= {movie.imdbVotes}
-          />
+          <MovieCard movie={movie}/>
         )})}
       </section>
     </div>

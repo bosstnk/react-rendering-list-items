@@ -1,0 +1,63 @@
+
+.movieCard {
+  display: flex;
+  flex-direction: row;
+  gap: 19px;
+  max-width: 400px;
+  max-height: 250px;
+  padding: 18px 0;
+  padding-left: 14px;
+  padding-right: 34px;
+  margin-top: 20px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 4px 40px 0px rgba(145, 124, 124, 0.25);
+}
+.movieDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.textCard {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #181818;
+}
+.textCardGenre {
+    display: flex;
+    gap: 7px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #181818;
+}
+
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+  
+  .genreStyle {
+    padding: 4px 10px;
+    background-color: #EAAC99;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+
+.imageCard {
+    width: 102px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: kanit;
+}
